@@ -92,3 +92,176 @@
   </p>
 
 </section>
+
+
+
+
+
+<subsection xml:id="subsec-Exercises">
+  <title>Exercises</title>
+  
+  <exercise xml:id="ex-english-to-symbolic">
+    <title>Convert English Statements into Symbols</title>
+
+    <statement>
+      <p>
+        Convert each compound statement into a symbolic statement. For each part,
+        assign symbols to each simple statement (for example,
+        <m>f</m> = “my favorite dish has lots of anchovies”), then use the appropriate
+        connectives (<m>\land</m>, <m>\lor</m>, <m>\lnot</m>, <m>\to</m>).
+      </p>
+    </statement>
+
+    <task xml:id="ex-english-to-symbolic-a">
+      <statement>
+        <p> Jim is a lawyer, yet he is not a crook.</p>
+      </statement>
+    </task>
+
+    <task xml:id="ex-english-to-symbolic-b">
+      <statement>
+        <p> Although our professor is young, he is knowledgeable.</p>
+      </statement>
+    </task>
+
+    <task xml:id="ex-english-to-symbolic-c">
+      <statement>
+        <p>
+           My favorite dish has lots of anchovies or is not spicy and also it comes in a large portion.
+        </p>
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-english-to-symbolic-d">
+      <statement>
+        <p>
+           My favorite dish has lots of anchovies and it comes in a large portion or it is spicy and it also comes in a large portion.
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="ex-english-to-symbolic-e">
+      <statement>
+        <p>
+           If you do not attend class, then either you read a book or you will not pass the exam.
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="ex-english-to-symbolic-f">
+      <statement>
+        <p>
+           I am doing a web search for pages containing the terms “global warming”, but not for pages containing both “termites” and “cattle”.
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="ex-english-to-symbolic-g">
+      <statement>
+        <p>
+         I am doing a web search for pages containing the terms “global warming”, but not for pages containing the word “termites” and not for pages containing the word “cattle”.
+        </p>
+      </statement>
+    </task>
+
+  </exercise>
+
+
+  <exercise xml:id="ex-symbolic-to-english">
+    <title>Convert Symbols into Words</title>
+
+    <statement>
+      <p>
+        Convert each symbolic statement into words, given:
+        <m>s</m> = The sunroof is extra,
+        <m>r</m> = The radial tires are included,
+        <m>w</m> = Power windows are optional.
+      </p>
+    </statement>
+
+    <task xml:id="ex-symbolic-to-english-a">
+      <statement>
+        <p> <m>(s \land w) \to r</m>.</p>
+      </statement>
+    </task>
+
+    <task xml:id="ex-symbolic-to-english-b">
+      <statement>
+        <p> <m>r \land \bigl(s \lor (\lnot w)\bigr)</m>.</p>
+      </statement>
+    </task>
+
+    <task xml:id="ex-symbolic-to-english-c">
+      <statement>
+        <p> <m>(\lnot r) \to \bigl((\lnot s) \lor (\lnot w)\bigr)</m>.</p>
+      </statement>
+    </task>
+
+    <task xml:id="ex-symbolic-to-english-d">
+      <statement>
+        <p> <m>\lnot(w \land s)</m>.</p>
+      </statement>
+    </task>
+
+  </exercise>
+
+
+    <subection xml:id="subsection-symbolic-to-english2">
+  <title>Convert Symbols into Words</title>
+
+  <p>
+    In the following exercises, convert each symbolic statement into words, given:
+    <m>s</m> = The sunroof is extra,
+    <m>r</m> = The radial tires are included,
+    <m>w</m> = Power windows are optional.
+  </p>
+
+  <question xml:id="ex-symbolic-to-english-a2">
+    <statement>
+      <p><m>(s \land w) \to r</m>.</p>
+    </statement>
+    <solution>
+      <p>
+        If the sunroof is extra and the power windows are optional, then the radial tires
+        are included.
+      </p>
+    </solution>
+  </question>
+
+  <question xml:id="ex-symbolic-to-english-b2">
+    <statement>
+      <p><m>r \land \bigl(s \lor (\lnot w)\bigr)</m>.</p>
+    </statement>
+    <solution>
+      <p>
+        The radial tires are included, and either the sunroof is extra or the power
+        windows are not optional.
+      </p>
+    </solution>
+  </question>
+
+  <question xml:id="ex-symbolic-to-english-c2">
+    <statement>
+      <p><m>(\lnot r) \to \bigl((\lnot s) \lor (\lnot w)\bigr)</m>.</p>
+    </statement>
+    <solution>
+      <p>
+        If the radial tires are not included, then either the sunroof is not extra or
+        the power windows are not optional.
+      </p>
+    </solution>
+  </question>
+
+  <question xml:id="ex-symbolic-to-english-d2">
+    <statement>
+      <p><m>\lnot(w \land s)</m>.</p>
+    </statement>
+    <solution>
+      <p>
+        It is not the case that the power windows are optional and the sunroof is extra.
+      </p>
+    </solution>
+  </question>
+
+</subsection>

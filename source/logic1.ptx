@@ -24,13 +24,23 @@
       <li>Ms. W. will have a broader audience next month.</li>
       <li>I did not join the club.</li>
     </ul>
-    <p>
-      Questions (for example, “How’s the weather?”), interjections (for example, “Cool!”),
+  </example>
+  <example xml:id="example-notstatements">
+    <title>Non-Statements</title>
+    <p>The following sentences are <term>NOT</term> statements:</p>
+    <ul>
+      <li>What time is it?</li>
+      <li>Listen!</li>
+      <li><m>x+5=9</m>.</li>
+    </ul>
+    <hint>
+      <p>
+      Questions, interjections (for example, “Cool!”),
       and incomplete sentences (for example, “If I could …”) are not considered to be
       statements unless rephrased appropriately.
-    </p>
+      </p>
+    </hint>
   </example>
-
   <p>
     <term>Simple statements</term> do not contain other statements as parts.
     All of the examples above are simple statements.
@@ -55,9 +65,9 @@
    </p>
 
   <ul>
-    <li><term>and</term>, <term>but</term>: <m>\land</m></li>
-    <li><term>or</term>: <m>\lor</m></li>
-    <li><term>if … then</term>: <m>\to</m></li>
+    <li>Conjunction (and, but) : <m>\land</m></li>
+    <li>Disjunction (or) : <m>\lor</m></li>
+    <li>Conditional (if..., then): <m>\to</m></li>
   </ul>
   
   </statement>
@@ -68,49 +78,107 @@
   <example xml:id="example-conjunction">
     <title>Conjunction</title>
     <p>
-      “Your bicycle is slick and I like its color” is written symbolically as
-      <m>s \land c</m>.
+       Suppose <m>s</m> and <m>c</m> represent the following statements:
+      </p> <p> <m>s =</m> “Your bicycle is slick,” </p>
+    <p>
+      <m>c =</m> “I like its color.”
     </p>
+    <p>
+      “Your bicycle is slick and I like its color” is written symbolically as
+      </p>
+      <me>s \land c</me>.
+  </example>
+      <example xml:id="example-disjunction">
+    <title>Disjunction</title>
+    <p>
+       Suppose <m>s</m> and <m>c</m> represent the following statements:
+      </p> <p> <m>s =</m> “Your bicycle is slick,” </p>
+    <p>
+      <m>c =</m> “I like its color.”
+    </p>
+    <p>
+      “Your bicycle is slick or I like its color” is written symbolically as
+      </p>
+      <me>s \lor c</me>.
   </example>
 
-  <p>
-    The operation <term>not</term>, written <m>\lnot</m>, turns a single statement into
+  <warning>
+<p>
+  In everyday English, the connective <term>or</term> is sometimes used in an
+  <term>exclusive</term> sense, meaning that exactly one of the options is true.
+  In contrast, the connective <term>or</term> in logic has an
+  <term>inclusive</term> meaning.
+  Thus, the statement “Bob will play tennis or go to the movies” means that Bob may
+  play tennis, or go to the movies, or do both.
+</p>
+</warning>
+<definition xml:id="def-not">
+  <statement>
+    <p>
+      The operation <term>not</term>, symbolically written <m>\lnot</m>, turns a single statement into
     its negation. It is not a connective.
-  </p>
-
-  <p>
-    The symbols representing statements, connectives, and negation form our
-    <term>logical dictionary</term>. Parentheses are used for punctuation.
-  </p>
-
-  <example xml:id="example-logical-operations">
-    <title>Statements and Their Logical Forms</title>
-    <ul>
-      <li><m>p:\hspace{1cm}</m> <m>p</m> is true (assertion)</li>
-      <li><m>\lnot p:\hspace{1cm}</m> <m>p</m> is false (negation)</li>
-      <li><m>p \land q:\hspace{1cm}</m> <m>p</m> and <m>q</m> (conjunction)</li>
-      <li><m>p \lor q:\hspace{1cm}</m> either <m>p</m> or <m>q</m>, or both (disjunction)</li>
-      <li><m>p \to q:\hspace{1cm}</m> if <m>p</m> then <m>q</m> (conditional)</li>
-    </ul>
-  </example>
-
-  <p>
-    The connective <term>or</term> has an <term>inclusive</term> meaning in logic.
-    For example, “Bob will play tennis or go to the movies” means that Bob may do
-    one, the other, or both.
-  </p>
-
-  <p>
+    </p>
+  </statement>
+</definition>
+  <note>
+    <p>
     The connective <term>but</term> plays the same logical role as <term>and</term>
     and is represented by the same symbol <m>\land</m>.
     For example, “Your bicycle is slick, but I don’t like its color” is written as
     <m>s \land \lnot c</m>.
   </p>
+  </note>
+
+  <p>
+    The symbols representing statements, connectives, and negation form our
+  logical dictionary. Parentheses are used for punctuation.
+  </p>
+
+
+
+
+<remark xml:id="remark-summary">
+  <title>Summary of Statements</title>
+
+  <table>
+    <tabular>
+      <row header="yes">
+        <cell>Symbol</cell>
+        <cell>Meaning</cell>
+      </row>
+
+      <row>
+        <cell><m>p</m></cell>
+        <cell>Statement <m>p</m> (assertion)</cell>
+      </row>
+      <row>
+        <cell><m>\lnot p</m></cell>
+        <cell>Not <m>p</m> (negation)</cell>
+      </row>
+      <row>
+        <cell><m>p \land q</m></cell>
+        <cell><m>p</m> and <m>q</m> (conjunction)</cell>
+      </row>
+      <row>
+        <cell><m>p \lor q</m></cell>
+        <cell>Either <m>p</m> or <m>q</m>, or both (disjunction)</cell>
+      </row>
+      <row>
+        <cell><m>p \to q</m></cell>
+        <cell>If <m>p</m> then <m>q</m> (conditional)</cell>
+      </row>
+    </tabular>
+  </table>
+</remark>
+
+
+<warning>
 
   <p>
     The use of parentheses is essential and requires careful attention.
     Consider the following compound statement:
   </p>
+  
 
   <example xml:id="example-parentheses">
     <title>The Role of Parentheses</title>
@@ -139,113 +207,124 @@
       different and unintended meaning.
     </p>
   </example>
+</warning>
 
 
+<subsection xml:id="subsec-exercises">
+  <title>Exercise</title>
 
-  <exercise xml:id="ex-english-to-symbolic">
-    <title>Convert English Statements into Symbols</title>
+  <p>
+    In the following questions, translate between English statements and symbolic logic.
+    You may choose your own letters for simple statements, as long as you define them clearly.
+  </p>
 
-    <statement>
+  <question xml:id="q-english-to-symbolic-a">
+    <statement><p>Jim is a lawyer, yet he is not a crook.</p></statement>
+    <solution>
+      <p>Let <m>l</m> = “Jim is a lawyer” and <m>c</m> = “Jim is a crook.” Then <m>l \land \lnot c</m>.</p>
+    </solution>
+  </question>
+
+  <question xml:id="q-english-to-symbolic-b">
+    <statement><p>Although our professor is young, he is knowledgeable.</p></statement>
+    <solution>
+      <p>Let <m>y</m> = “Our professor is young” and <m>k</m> = “Our professor is knowledgeable.” 
+        Then, the answer is <m>y \land k</m>.</p>
+    </solution>
+  </question>
+
+  <question xml:id="q-english-to-symbolic-c">
+    <statement><p>My favorite dish has lots of anchovies or is not spicy and also it comes in a large portion.</p></statement>
+    <solution>
       <p>
-        Convert each compound statement into a symbolic statement. For each part,
-        assign symbols to each simple statement (for example,
-        <m>f</m> = “my favorite dish has lots of anchovies”), then use the appropriate
-        connectives (<m>\land</m>, <m>\lor</m>, <m>\lnot</m>, <m>\to</m>).
+        Let <m>a</m> = “My favorite dish has lots of anchovies,” <m>s</m> = “My favorite dish is spicy,” and <m>l</m> = “My favorite dish comes in a large portion.”
+        Then <me>(a \lor \lnot s) \land l</me>.
       </p>
-    </statement>
+    </solution>
+  </question>
 
-    <task xml:id="ex-english-to-symbolic-a">
-      <statement>
-        <p> Jim is a lawyer, yet he is not a crook.</p>
-      </statement>
-    </task>
+  <question xml:id="q-english-to-symbolic-d">
+    <statement><p>My favorite dish has lots of anchovies and it comes in a large portion or it is spicy and it also comes in a large portion.</p></statement>
+    <solution>
+      <p>Using the same symbols as <xref ref="q-english-to-symbolic-c"/>, the statement is <m>(a \land l) \lor (s \land l)</m>.</p>
+    </solution>
+  </question>
 
-    <task xml:id="ex-english-to-symbolic-b">
-      <statement>
-        <p> Although our professor is young, he is knowledgeable.</p>
-      </statement>
-    </task>
-
-    <task xml:id="ex-english-to-symbolic-c">
-      <statement>
-        <p>
-           My favorite dish has lots of anchovies or is not spicy and also it comes in a large portion.
-        </p>
-      </statement>
-    </task>
-
-    <task xml:id="ex-english-to-symbolic-d">
-      <statement>
-        <p>
-           My favorite dish has lots of anchovies and it comes in a large portion or it is spicy and it also comes in a large portion.
-        </p>
-      </statement>
-    </task>
-
-    <task xml:id="ex-english-to-symbolic-e">
-      <statement>
-        <p>
-           If you do not attend class, then either you read a book or you will not pass the exam.
-        </p>
-      </statement>
-    </task>
-
-    <task xml:id="ex-english-to-symbolic-f">
-      <statement>
-        <p>
-           I am doing a web search for pages containing the terms “global warming”, but not for pages containing both “termites” and “cattle”.
-        </p>
-      </statement>
-    </task>
-
-    <task xml:id="ex-english-to-symbolic-g">
-      <statement>
-        <p>
-         I am doing a web search for pages containing the terms “global warming”, but not for pages containing the word “termites” and not for pages containing the word “cattle”.
-        </p>
-      </statement>
-    </task>
-
-  </exercise>
-
-
-  <exercise xml:id="ex-symbolic-to-english">
-    <title>Convert Symbols into Words</title>
-
-    <statement>
+  <question xml:id="q-english-to-symbolic-e">
+    <statement><p>If you do not attend class, then either you read a book or you will not pass the exam.</p></statement>
+    <solution>
       <p>
-        Convert each symbolic statement into words, given:
-        <m>s</m> = The sunroof is extra,
-        <m>r</m> = The radial tires are included,
-        <m>w</m> = Power windows are optional.
+        Let <m>a</m> = “you attend class,” <m>b</m> = “you read a book,” and <m>p</m> = “you pass the exam.”
+        Then <m>\lnot a \to (b \lor \lnot p)</m>.
       </p>
+    </solution>
+  </question>
+
+  <question xml:id="q-english-to-symbolic-f">
+    <statement><p>I am doing a web search for pages containing “global warming”, but not for pages containing both “termites” and “cattle”.</p></statement>
+    <solution>
+      <p>
+        Let <m>g</m> = “search ‘global warming’,” <m>t</m> = “search ‘termites’,” <m>c</m> = “search ‘cattle’.”
+        Then <m>g \land \lnot(t \land c)</m>.
+      </p>
+    </solution>
+  </question>
+  <question xml:id="q-english-to-symbolic-g">
+    <statement><p>I am doing a web search for pages containing “global warming”, but not for pages containing “termites” and not for pages containing “cattle”.</p></statement>
+    <solution>
+      <p>Using the same symbols, the statement is <m>g \land (\lnot t) \land (\lnot c)</m>.</p>
+    </solution>
+  </question>
+  
+
+</subsection>
+
+
+
+<subsection xml:id="subsec-ex2">
+  <title>Exercise</title>
+  <p>
+  Suppose that
+  </p>
+  <p>
+    <m>s</m> = "The sunroof is extra,"
+  </p>
+  <p>
+     <m>r</m> = "The radial tires are
+  included,"
+  </p>
+  <p>
+    <response />
+    <m>w</m> = "Power windows are optional."
+</p>
+<p>
+  Convert each of the following statements into words.
+</p>
+
+  <question xml:id="q-symbolic-to-english-a">
+    <statement>
+      
+         <m>(s \land w) \to r</m>.
+      
     </statement>
+    <solution><p>If the sunroof is extra and the power windows are optional, then the radial tires are included.</p></solution>
+  </question>
 
-    <task xml:id="ex-symbolic-to-english-a">
-      <statement>
-        <p> <m>(s \land w) \to r</m>.</p>
-      </statement>
-    </task>
+  <question xml:id="q-symbolic-to-english-b">
+    <statement><p>Convert into words: <m>r \land (s \lor \lnot w)</m>.</p></statement>
+    <solution><p>The radial tires are included, and either the sunroof is extra or the power windows are not optional.</p></solution>
+  </question>
 
-    <task xml:id="ex-symbolic-to-english-b">
-      <statement>
-        <p> <m>r \land \bigl(s \lor (\lnot w)\bigr)</m>.</p>
-      </statement>
-    </task>
+  <question xml:id="q-symbolic-to-english-c">
+    <statement><p>Convert into words: <m>(\lnot r) \to ((\lnot s) \lor (\lnot w))</m>.</p></statement>
+    <solution><p>If the radial tires are not included, then either the sunroof is not extra or the power windows are not optional.</p></solution>
+  </question>
 
-    <task xml:id="ex-symbolic-to-english-c">
-      <statement>
-        <p> <m>(\lnot r) \to \bigl((\lnot s) \lor (\lnot w)\bigr)</m>.</p>
-      </statement>
-    </task>
-
-    <task xml:id="ex-symbolic-to-english-d">
-      <statement>
-        <p> <m>\lnot(w \land s)</m>.</p>
-      </statement>
-    </task>
-
-  </exercise>
+  <question xml:id="q-symbolic-to-english-d">
+    <statement><p>Convert into words: <m>\lnot(w \land s)</m>.</p></statement>
+    <solution><p>It is not the case that the power windows are optional and the sunroof is extra.</p></solution>
+  </question>
+</subsection>
 
 </section>
 

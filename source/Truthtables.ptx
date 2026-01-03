@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="section-course-requirements" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Truth Tables</title>
+
+<p>
+  Each statement is True <term>T</term> or False <term>F</term>
+  but not both. A truth table summarizes all possible truth values of a statement. 
+
+</p>
+<definition xml:id="def-ttablenegation">
+  <statement>
+    <p>
+      Negation <term>reverses</term> the truth value of a statement.
+    </p>
+    <table>
+  <title>Truth Table for Negation</title>
+  <tabular halign="center">
+    <row header="yes" bottom="minor">
+      <cell><m>p</m></cell>
+      <cell><m>\lnot p</m></cell>
+    </row>
+    <row>
+      <cell>T</cell>
+      <cell>F</cell>
+    </row>
+    <row>
+      <cell>F</cell>
+      <cell>T</cell>
+    </row>
+  </tabular>
+</table>
+
+  </statement>
+</definition>
+<definition xml:id="def-ttable-conjunction">
+  <statement>
+    <p>
+      A <term>conjunction</term> (<m>\land</m>) combines two statements.
+      The only case in which a conjunction is true is when
+      <term>both statements are true</term>.
+    </p>
+
+    <table>
+      <title>Truth Table for Conjunction</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>p</m></cell>
+          <cell><m>q</m></cell>
+          <cell><m>p \land q</m></cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+      </tabular>
+    </table>
+  </statement>
+</definition>
+<definition xml:id="def-ttable-disjunction">
+  <statement>
+    <p>
+      A <term>disjunction</term> (<m>\lor</m>) combines two statements.
+      The only case in which a disjunction is <term>false</term>
+      is when <term>both statements are false</term>.
+    </p>
+
+    <table>
+      <title>Truth Table for Disjunction</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>p</m></cell>
+          <cell><m>q</m></cell>
+          <cell><m>p \lor q</m></cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+      </tabular>
+    </table>
+  </statement>
+</definition>
+<example xml:id="ex-truthtable-demorgan-and">
+  <title>Truth Table Practice</title>
+
+  <statement>
+    <p>
+      Construct the truth table for the compound statement <m>\lnot(p \lor q) \land p</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Build the table by computing <m>p \lor q</m>, then <m>\lnot(p \lor q)</m>, and finally
+      <m>\lnot(p \lor q) \land p</m>.
+    </p>
+
+    <table>
+      <title>Truth Table for <m>\lnot(p \lor q) \land p</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>p</m></cell>
+          <cell><m>q</m></cell>
+          <cell><m>p \lor q</m></cell>
+          <cell><m>\lnot(p \lor q)</m></cell>
+          <cell><m>\lnot(p \lor q)\land p</m></cell>
+        </row>
+
+        <row>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+
+        <row>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+
+        <row>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+
+        <row>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      The final column is always <m>F</m>, so the statement <m>\lnot(p \lor q) \land p</m>
+      is a contradiction (always false).
+    </p>
+  </solution>
+</example>
+<definition xml:id="def-ttable-conditional">
+  <statement>
+    <p>
+      A <term>conditional statement</term> is a compound statement of the form
+      “if <m>p</m> then <m>q</m>,” written symbolically as <m>p \to q</m>.
+      The statement <m>p</m> is called the <term>antecedent</term> (or condition),
+      and the statement <m>q</m> is called the <term>consequent</term>.
+    </p>
+
+    <p>
+      The only case in which a conditional statement is <term>false</term>
+      is when the antecedent is <term>true</term> and the consequent is
+      <term>false</term>.
+    </p>
+
+    <table>
+      <title>Truth Table for Conditional</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>p</m></cell>
+          <cell><m>q</m></cell>
+          <cell><m>p \to q</m></cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+        </row>
+      </tabular>
+    </table>
+  </statement>
+</definition>
+
+</section>
+

@@ -10,10 +10,17 @@
   </docinfo>
 
   <article xml:id="shorttitlelowercase">
-    <title>MATH 103: Spring 2026</title>
+ <title>
+    <line>Logic</line>
+  </title>
+  <subtitle>MATH 103 Supplementary Materials</subtitle>
+      
+
+
 
     <xi:include href="./frontmatter.ptx" />
     <xi:include href="./logic1.ptx" />
+    <xi:include href="./Truthtables.ptx" />
    
   </article>
 
