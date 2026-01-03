@@ -225,6 +225,639 @@
     </table>
   </statement>
 </definition>
+<exercise xml:id="ex-truthtable-conditional-conjunction">
+  <title>Truth Table Practice</title>
 
+  <statement>
+    <p>
+      Construct a truth table for the compound statement <m>(p \land q) \to q</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      We first compute <m>p \land q</m>, and then evaluate the conditional
+      <m>(p \land q) \to q</m>.
+    </p>
+
+    <table>
+      <title>Truth Table for <m>(p \land q) \to q</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>p</m></cell>
+          <cell><m>q</m></cell>
+          <cell><m>p \land q</m></cell>
+          <cell><m>(p \land q) \to q</m></cell>
+        </row>
+
+        <row>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+
+        <row>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+        </row>
+
+        <row>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+        </row>
+
+        <row>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      Since the final column is always <m>T</m>, the statement
+      <m>(p \land q) \to q</m> is a <term>tautology</term>.
+    </p>
+  </solution>
+</exercise>
+<remark xml:id="remark-conditional-variations">
+  <title>Conditional Statement Variations</title>
+
+  <p>
+    A conditional statement of the form <m>p \to q</m> can be expressed in several
+    equivalent ways in English. All of the following statements have the same logical
+    meaning.
+  </p>
+
+  <ul>
+    <li>If <m>p</m>, then <m>q</m>.</li>
+    <li>If <m>p</m>, <m>q</m>.</li>
+    <li><m>q</m> if <m>p</m>.</li>
+    <li>When <m>p</m>, <m>q</m>.</li>
+    <li><m>q</m> when <m>p</m>.</li>
+    <li><m>p</m> is sufficient for <m>q</m>.</li>
+    <li><m>q</m> is necessary for <m>p</m>.</li>
+    <li><m>p</m> only if <m>q</m>.</li>
+  </ul>
+</remark>
+<remark xml:id="remark-only-if-warning">
+  <title>Common Pitfall: “If” vs. “Only If”</title>
+
+  <p>
+    A frequent source of confusion is the difference between the phrases
+    <term>if</term> and <term>only if</term>.
+  </p>
+
+  <p>
+    The statement “<m>p</m> only if <m>q</m>” means that <m>q</m> is
+    <term>necessary</term> for <m>p</m>, and is translated symbolically as
+    <m>p \to q</m>.
+  </p>
+
+  <p>
+    In contrast, the statement “<m>p</m> if <m>q</m>” is translated as <m>q \to p</m>.
+  </p>
+
+  <p>
+    One helpful rule to remember is:
+  </p>
+
+  <ul>
+    <li>
+      The phrase <term>only if</term> points to the <term>consequent</term>
+      of a conditional statement.
+    </li>
+  </ul>
+
+  <example xml:id="example-only-if">
+    <title>Example</title>
+    <p>
+      The statement “You pass the exam only if you attend class” means that
+      attending class is necessary for passing the exam.
+      Symbolically, this is written as <m>p \to q</m>, where
+      <m>p</m> = “you pass the exam” and
+      <m>q</m> = “you attend class.”
+    </p>
+  </example>
+</remark>
+<remark xml:id="remark-hidden-conditionals">
+  <title>Hidden Conditional Statements in English</title>
+
+  <p>
+    Many statements in everyday English do not explicitly use the phrase
+    “if … then …,” but they still express a conditional relationship.
+    Such statements are called <term>hidden conditional statements</term>.
+  </p>
+
+  <p>
+    In these cases, the conditional form can be revealed by rewriting the
+    statement in an explicit “if … then …” format.
+  </p>
+
+  <example xml:id="example-hidden-conditional-koala">
+    <title>Example</title>
+    <p>
+      The statement “No koalas live in South Carolina” can be rewritten as:
+      “If it is a koala, then it does not live in South Carolina.”
+    </p>
+  </example>
+
+  <example xml:id="example-hidden-conditional-jordan">
+    <title>Example</title>
+    <p>
+      The statement “Michael Jordan eats Wheaties” can be rewritten as:
+      “If you are Michael Jordan, then you eat Wheaties.”
+    </p>
+  </example>
+
+</remark>
+<exercise xml:id="ex-rewrite-if-then">
+  <title>Rewriting Statements as Conditionals</title>
+
+  <statement>
+    <p>
+      Rewrite each of the following statements using the form <em>if … then …</em>.
+    </p>
+  </statement>
+
+  <task xml:id="task-rewrite-if-then-a">
+    <statement>
+      <p> Every picture tells a story.</p>
+    </statement>
+    <solution>
+      <p>If it is a picture, then it tells a story.</p>
+    </solution>
+  </task>
+
+  <task xml:id="task-rewrite-if-then-b">
+    <statement>
+      <p> I can come with you only if I can find some time.</p>
+    </statement>
+    <solution>
+      <p>If I can come with you, then I can find some time.</p>
+    </solution>
+  </task>
+
+</exercise>
+<example xml:id="example-truthtable-three-variables">
+  <title>Truth Table with Three Variables</title>
+
+  <p>
+    Consider the compound statement <m>(p \land q) \lor \lnot r</m>, which involves
+    three simple statements: <m>p</m>, <m>q</m>, and <m>r</m>.
+  </p>
+
+  <p>
+    Compound statements may contain several simple statements. In order to determine
+    how many columns are needed in a truth table, it is helpful to break the compound
+    statement into <term>building blocks</term> of increasing complexity, starting
+    with a column for each simple statement and ending with the compound statement
+    itself.
+  </p>
+
+  <p>
+    For this example, the building blocks are:
+  </p>
+
+  <ul>
+    <li><m>p</m></li>
+    <li><m>q</m></li>
+    <li><m>r</m></li>
+    <li><m>p \land q</m></li>
+    <li><m>\lnot r</m></li>
+    <li><m>(p \land q) \lor \lnot r</m></li>
+  </ul>
+
+  <solution>
+    <table>
+      <title>Truth Table for <m>(p \land q) \lor \lnot r</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>p</m></cell>
+          <cell><m>q</m></cell>
+          <cell><m>r</m></cell>
+          <cell><m>p \land q</m></cell>
+          <cell><m>\lnot r</m></cell>
+          <cell><m>(p \land q) \lor \lnot r</m></cell>
+        </row>
+
+        <row>
+          <cell>T</cell><cell>T</cell><cell>T</cell>
+          <cell>T</cell><cell>F</cell><cell>T</cell>
+        </row>
+        <row>
+          <cell>T</cell><cell>T</cell><cell>F</cell>
+          <cell>T</cell><cell>T</cell><cell>T</cell>
+        </row>
+        <row>
+          <cell>T</cell><cell>F</cell><cell>T</cell>
+          <cell>F</cell><cell>F</cell><cell>F</cell>
+        </row>
+        <row>
+          <cell>T</cell><cell>F</cell><cell>F</cell>
+          <cell>F</cell><cell>T</cell><cell>T</cell>
+        </row>
+        <row>
+          <cell>F</cell><cell>T</cell><cell>T</cell>
+          <cell>F</cell><cell>F</cell><cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell><cell>T</cell><cell>F</cell>
+          <cell>F</cell><cell>T</cell><cell>T</cell>
+        </row>
+        <row>
+          <cell>F</cell><cell>F</cell><cell>T</cell>
+          <cell>F</cell><cell>F</cell><cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell><cell>F</cell><cell>F</cell>
+          <cell>F</cell><cell>T</cell><cell>T</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      By constructing the truth table one building block at a time, we reduce errors
+      and make the logical structure of the compound statement clear.
+    </p>
+  </solution>
+</example>
+<subsection xml:id="subsec-exercises-truth-tables">
+  <title>Exercises</title>
+
+  <p>
+    Construct truth tables for the following compound statements.
+    Include columns for each simple statement and each intermediate component,
+    ending with the compound statement itself.
+  </p>
+
+  <!-- (a) p ∧ ¬q -->
+  <question xml:id="q-tt-a">
+    <statement><p>Construct a truth table for <m>p \land \lnot q</m>.</p></statement>
+    <solution>
+      <table>
+        <title>Truth Table for <m>p \land \lnot q</m></title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>\lnot q</m></cell>
+            <cell><m>p \land \lnot q</m></cell>
+          </row>
+          <row><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>F</cell><cell>T</cell><cell>F</cell></row>
+        </tabular>
+      </table>
+    </solution>
+  </question>
+
+  <!-- (b) ¬(¬p) ∧ p -->
+  <question xml:id="q-tt-b">
+    <statement><p>Construct a truth table for <m>\lnot(\lnot p) \land p</m>.</p></statement>
+    <solution>
+      <table>
+        <title>Truth Table for <m>\lnot(\lnot p) \land p</m></title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>p</m></cell>
+            <cell><m>\lnot p</m></cell>
+            <cell><m>\lnot(\lnot p)</m></cell>
+            <cell><m>\lnot(\lnot p)\land p</m></cell>
+          </row>
+          <row><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+        </tabular>
+      </table>
+    </solution>
+  </question>
+
+  <!-- (c) ¬(p ∨ q) -->
+  <question xml:id="q-tt-c">
+    <statement><p>Construct a truth table for <m>\lnot(p \lor q)</m>.</p></statement>
+    <solution>
+      <table>
+        <title>Truth Table for <m>\lnot(p \lor q)</m></title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>p \lor q</m></cell>
+            <cell><m>\lnot(p \lor q)</m></cell>
+          </row>
+          <row><cell>T</cell><cell>T</cell><cell>T</cell><cell>F</cell></row>
+          <row><cell>T</cell><cell>F</cell><cell>T</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell></row>
+        </tabular>
+      </table>
+    </solution>
+  </question>
+
+  <!-- (d) (¬p) ∧ ¬q -->
+  <question xml:id="q-tt-d">
+    <statement><p>Construct a truth table for <m>(\lnot p)\land \lnot q</m>.</p></statement>
+    <solution>
+      <table>
+        <title>Truth Table for <m>(\lnot p)\land \lnot q</m></title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>\lnot p</m></cell>
+            <cell><m>\lnot q</m></cell>
+            <cell><m>(\lnot p)\land \lnot q</m></cell>
+          </row>
+          <row><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>T</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell></row>
+        </tabular>
+      </table>
+    </solution>
+  </question>
+
+  <!-- (e) ¬(p ∨ ¬q) ∨ p -->
+  <question xml:id="q-tt-e">
+    <statement><p>Construct a truth table for <m>\lnot(p \lor \lnot q)\lor p</m>.</p></statement>
+    <solution>
+      <table>
+        <title>Truth Table for <m>\lnot(p \lor \lnot q)\lor p</m></title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>\lnot q</m></cell>
+            <cell><m>p \lor \lnot q</m></cell>
+            <cell><m>\lnot(p \lor \lnot q)</m></cell>
+            <cell><m>\lnot(p \lor \lnot q)\lor p</m></cell>
+          </row>
+          <row><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell><cell>F</cell><cell>T</cell></row>
+          <row><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+          <row><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+        </tabular>
+      </table>
+    </solution>
+  </question>
+
+  <!-- (f) ¬(p ∨ (¬q)) ∧ r -->
+  <question xml:id="q-tt-f">
+    <statement><p>Construct a truth table for <m>\lnot(p \lor (\lnot q))\land r</m>.</p></statement>
+    <solution>
+      <table>
+        <title>Truth Table for <m>\lnot(p \lor (\lnot q))\land r</m></title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>r</m></cell>
+            <cell><m>\lnot q</m></cell>
+            <cell><m>p \lor (\lnot q)</m></cell>
+            <cell><m>\lnot(p \lor (\lnot q))</m></cell>
+            <cell><m>\lnot(p \lor (\lnot q))\land r</m></cell>
+          </row>
+          <row><cell>T</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>T</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+        </tabular>
+      </table>
+    </solution>
+  </question>
+
+  <!-- (g) (r ∧ p) ∨ ¬q -->
+  <question xml:id="q-tt-g">
+    <statement><p>Construct a truth table for <m>(r \land p)\lor \lnot q</m>.</p></statement>
+    <solution>
+      <table>
+        <title>Truth Table for <m>(r \land p)\lor \lnot q</m></title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>r</m></cell>
+            <cell><m>r \land p</m></cell>
+            <cell><m>\lnot q</m></cell>
+            <cell><m>(r \land p)\lor \lnot q</m></cell>
+          </row>
+          <row><cell>T</cell><cell>T</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell></row>
+          <row><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell><cell>T</cell></row>
+          <row><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>F</cell><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+          <row><cell>F</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+        </tabular>
+      </table>
+    </solution>
+  </question>
+<!-- (h) (p ∧ q) → q -->
+<question xml:id="q-tt-h">
+  <statement>
+    <p>Construct a truth table for <m>(p \land q)\to q</m>.</p>
+  </statement>
+  <solution>
+    <table>
+      <title>Truth Table for <m>(p \land q)\to q</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>p</m></cell>
+          <cell><m>q</m></cell>
+          <cell><m>p \land q</m></cell>
+          <cell><m>(p \land q)\to q</m></cell>
+        </row>
+        <row><cell>T</cell><cell>T</cell><cell>T</cell><cell>T</cell></row>
+        <row><cell>T</cell><cell>F</cell><cell>F</cell><cell>T</cell></row>
+        <row><cell>F</cell><cell>T</cell><cell>F</cell><cell>T</cell></row>
+        <row><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell></row>
+      </tabular>
+    </table>
+  </solution>
+</question>
+
+<!-- (i) (¬p) → (p → q) -->
+<question xml:id="q-tt-i">
+  <statement>
+    <p>Construct a truth table for <m>(\lnot p)\to (p\to q)</m>.</p>
+  </statement>
+  <solution>
+    <table>
+      <title>Truth Table for <m>(\lnot p)\to (p\to q)</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>p</m></cell>
+          <cell><m>q</m></cell>
+          <cell><m>\lnot p</m></cell>
+          <cell><m>p\to q</m></cell>
+          <cell><m>(\lnot p)\to (p\to q)</m></cell>
+        </row>
+        <row><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+        <row><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell></row>
+        <row><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell><cell>T</cell></row>
+        <row><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell></row>
+      </tabular>
+    </table>
+  </solution>
+</question>
+
+<!-- (j) [p ∧ (¬q ∨ r)] → (q ∨ ¬p) -->
+<question xml:id="q-tt-j">
+  <statement>
+    <p>
+      Construct a truth table for
+      <m>[p \land (\lnot q \lor r)] \to (q \lor \lnot p)</m>.
+    </p>
+  </statement>
+  <solution>
+    <table>
+      <title>Truth Table for <m>[p \land (\lnot q \lor r)] \to (q \lor \lnot p)</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>p</m></cell>
+          <cell><m>q</m></cell>
+          <cell><m>r</m></cell>
+          <cell><m>\lnot q</m></cell>
+          <cell><m>\lnot q \lor r</m></cell>
+          <cell><m>p \land (\lnot q \lor r)</m></cell>
+          <cell><m>\lnot p</m></cell>
+          <cell><m>q \lor \lnot p</m></cell>
+          <cell><m>[p \land (\lnot q \lor r)] \to (q \lor \lnot p)</m></cell>
+        </row>
+
+        <row><cell>T</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+        <row><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+        <row><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell></row>
+        <row><cell>T</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell></row>
+        <row><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell></row>
+        <row><cell>F</cell><cell>T</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell></row>
+        <row><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell></row>
+        <row><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell><cell>T</cell><cell>T</cell></row>
+      </tabular>
+    </table>
+  </solution>
+</question>
+
+</subsection>
+<subsection xml:id="subsec-">
+  <title>Tautology and Contradiction</title>
+  <p>
+    A <term>tautology</term> is a statement that is always true. 
+  </p>
+<p>
+A <term>contradiction</term> is a statement that are always false. 
+
+  </p>
+  <exercise xml:id="ex-tautology-contradiction">
+  <title>Tautology and Contradiction</title>
+
+  <statement>
+    <p>
+      For each statement, construct a truth table (including columns for intermediate
+      components) and use the final column to determine whether the statement is a
+      <term>tautology</term> or a <term>contradiction</term>.
+    </p>
+  </statement>
+
+  <!-- Tautology -->
+  <task xml:id="task-tautology-1">
+    <statement>
+      <p>
+        Show that the statement <m>p \lor \lnot(p \lor q)</m> is a tautology by constructing its truth table.
+      </p>
+    </statement>
+    <solution>
+      <table>
+        <title>Truth Table for <m>p \lor \lnot(p \lor q)</m></title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>p \lor q</m></cell>
+            <cell><m>\lnot(p \lor q)</m></cell>
+            <cell><m>p \lor \lnot(p \lor q)</m></cell>
+          </row>
+          <row><cell>T</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>T</cell></row>
+          <row><cell>T</cell><cell>F</cell><cell>T</cell><cell>F</cell><cell>T</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>T</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell><cell>T</cell></row>
+        </tabular>
+      </table>
+      <p>
+        Since the final column is not always <m>T</m>, this statement is <em>not</em> a tautology.
+      </p>
+    </solution>
+  </task>
+
+  <!-- Tautology (actually a tautology) -->
+  <task xml:id="task-tautology-2">
+    <statement>
+      <p>
+        Show that the statement <m>(p \land q)\to p</m> is a tautology by constructing its truth table.
+      </p>
+    </statement>
+    <solution>
+      <table>
+        <title>Truth Table for <m>(p \land q)\to p</m></title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>p \land q</m></cell>
+            <cell><m>(p \land q)\to p</m></cell>
+          </row>
+          <row><cell>T</cell><cell>T</cell><cell>T</cell><cell>T</cell></row>
+          <row><cell>T</cell><cell>F</cell><cell>F</cell><cell>T</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>F</cell><cell>T</cell></row>
+          <row><cell>F</cell><cell>F</cell><cell>F</cell><cell>T</cell></row>
+        </tabular>
+      </table>
+      <p>
+        The final column is always <m>T</m>, so the statement is a tautology.
+      </p>
+    </solution>
+  </task>
+
+  <!-- Contradiction -->
+  <task xml:id="task-contradiction-1">
+    <statement>
+      <p>
+        Show that the statement <m>p \land \lnot p</m> is a contradiction by constructing its truth table.
+      </p>
+    </statement>
+    <solution>
+      <table>
+        <title>Truth Table for <m>p \land \lnot p</m></title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>p</m></cell>
+            <cell><m>\lnot p</m></cell>
+            <cell><m>p \land \lnot p</m></cell>
+          </row>
+          <row><cell>T</cell><cell>F</cell><cell>F</cell></row>
+          <row><cell>F</cell><cell>T</cell><cell>F</cell></row>
+        </tabular>
+      </table>
+      <p>
+        The final column is always <m>F</m>, so the statement is a contradiction.
+      </p>
+    </solution>
+  </task>
+
+</exercise>
+
+</subsection>
 </section>
 
