@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logical Equivalences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.7';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c2757fc695bc848c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="authorslastnamelowercase-ShortTitleCamelCase" class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="shorttitlelowercase.html"><span class="title">Logic</span> <span class="subtitle">MATH 103 Supplementary Materials</span></a></h1>
+<p class="byline">Behrang Forghani</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="section-course-requirements.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="shorttitlelowercase.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\foo}{b^{ar}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="shorttitlelowercase-3.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-statements-connectives.html" class="internal"><span class="codenumber">1</span> <span class="title">Statements and Connectives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-statements-connectives.html#subsec-exercises" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercise</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-statements-connectives.html#subsec-ex2" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercise</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-course-requirements.html" class="internal"><span class="codenumber">2</span> <span class="title">Truth Tables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-course-requirements.html#subsec-exercises-truth-tables" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-course-requirements.html#subsec-" class="internal"><span class="codenumber">2.2</span> <span class="title">Tautology and Contradiction</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-logical-equivalence.html" class="internal"><span class="codenumber">3</span> <span class="title">Logical Equivalences</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-logical-equivalence.html#subsec-exercises-logical-equivalence" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-logical-equivalence.html#subsec-negating-statements" class="internal"><span class="codenumber">3.2</span> <span class="title">Negating Statements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-logical-equivalence.html#subsec-exercise" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercise</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-logical-equivalence"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Logical Equivalences</span>
+</h2>
+<article class="objectives goal-like" id="obj-logical-equivalences"><h3 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Goals for This Section</span>
+</h3>
+<ol class="decimal" id="obj-logical-equivalences-2">
+<li id="obj-logical-equivalences-2-1">
+<div class="para" id="p-derived-obj-logical-equivalences-2-1">Define <dfn class="terminology">logical equivalence</dfn> and use truth tables to determine whether two statements are logically equivalent.</div>
+<div class="autopermalink" data-description="Objective 3.1"><a href="#obj-logical-equivalences-2-1" title="Copy heading and permalink for Objective 3.1" aria-label="Copy heading and permalink for Objective 3.1">🔗</a></div>
+</li>
+<li id="obj-logical-equivalences-2-2">
+<div class="para" id="p-derived-obj-logical-equivalences-2-2">Apply common equivalence laws, including <dfn class="terminology">De Morgan’s Laws</dfn> and the double-negation law, to rewrite statements more simply.</div>
+<div class="autopermalink" data-description="Objective 3.2"><a href="#obj-logical-equivalences-2-2" title="Copy heading and permalink for Objective 3.2" aria-label="Copy heading and permalink for Objective 3.2">🔗</a></div>
+</li>
+<li id="obj-logical-equivalences-2-3">
+<div class="para" id="p-derived-obj-logical-equivalences-2-3">Learn how to negate statements involving conjunctions, disjunctions, and conditionals.</div>
+<div class="autopermalink" data-description="Objective 3.3"><a href="#obj-logical-equivalences-2-3" title="Copy heading and permalink for Objective 3.3" aria-label="Copy heading and permalink for Objective 3.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Objectives 3: Goals for This Section"><a href="#obj-logical-equivalences" title="Copy heading and permalink for Objectives 3: Goals for This Section" aria-label="Copy heading and permalink for Objectives 3: Goals for This Section">🔗</a></div></article><article class="definition definition-like" id="def-lequivalence"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-lequivalence-1-1">Two statements are <dfn class="terminology">logically equivalent</dfn> if they have the same truth value for every possible assignment of truth values to their variables. Equivalently, their truth tables have identical final columns. We use <span class="process-math">\(\equiv\)</span> to denote logical equivalence between statements.<div class="autopermalink" data-description="Paragraph"><a href="#def-lequivalence-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.1"><a href="#def-lequivalence" title="Copy heading and permalink for Definition 3.1" aria-label="Copy heading and permalink for Definition 3.1">🔗</a></div></article><details id="example-double-negation-equivalence" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(p \equiv \lnot(\lnot p)\)</span>.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="example-double-negation-equivalence-2">
+<div class="para">The following truth table shows that the statements <span class="process-math">\(p\)</span> and <span class="process-math">\(\lnot(\lnot p)\)</span> always have the same truth value. Therefore, they are logically equivalent,  thus</div>
+<div class="displaymath process-math" id="example-double-negation-equivalence-2-3">
+\begin{equation*}
+p \equiv \lnot(\lnot p)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-double-negation-equivalence-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="example-double-negation-equivalence-3"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth Table for <span class="process-math">\(p\)</span> and <span class="process-math">\(\lnot(\lnot p)\)</span><div class="autopermalink" data-description="Table 3.3: Truth Table for p and \lnot(\lnot p)"><a href="#example-double-negation-equivalence-3" title="Copy heading and permalink for Table 3.3: Truth Table for p and \lnot(\lnot p)" aria-label="Copy heading and permalink for Table 3.3: Truth Table for p and \lnot(\lnot p)">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot(\lnot p)\)</span></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div></figure><div class="para" id="example-double-negation-equivalence-4">Since the columns for <span class="process-math">\(p\)</span> and <span class="process-math">\(\lnot(\lnot p)\)</span> are identical, we conclude that <span class="process-math">\(p \equiv \lnot(\lnot p)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-double-negation-equivalence-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2:  p \equiv \lnot(\lnot p)"><a href="#example-double-negation-equivalence" title="Copy heading and permalink for Example 3.2:  p \equiv \lnot(\lnot p)" aria-label="Copy heading and permalink for Example 3.2:  p \equiv \lnot(\lnot p)">🔗</a></div></article></details><details id="example-disjunction-commutative" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(p \lor q \equiv q \lor p\)</span>.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="example-disjunction-commutative-2">The following truth table shows that the statements <span class="process-math">\(p \lor q\)</span> and <span class="process-math">\(q \lor p\)</span> always have the same truth value. Therefore, they are logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#example-disjunction-commutative-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="example-disjunction-commutative-3"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth Table for <span class="process-math">\(p \lor q\)</span> and <span class="process-math">\(q \lor p\)</span><div class="autopermalink" data-description="Table 3.5: Truth Table for p \lor q and q \lor p"><a href="#example-disjunction-commutative-3" title="Copy heading and permalink for Table 3.5: Truth Table for p \lor q and q \lor p" aria-label="Copy heading and permalink for Table 3.5: Truth Table for p \lor q and q \lor p">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p \lor q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(q \lor p\)</span></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div></figure><div class="para" id="example-disjunction-commutative-4">Since the columns for <span class="process-math">\(p \lor q\)</span> and <span class="process-math">\(q \lor p\)</span> are identical, we conclude that <span class="process-math">\(p \lor q \equiv q \lor p\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-disjunction-commutative-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.4: p \lor q \equiv q \lor p"><a href="#example-disjunction-commutative" title="Copy heading and permalink for Example 3.4: p \lor q \equiv q \lor p" aria-label="Copy heading and permalink for Example 3.4: p \lor q \equiv q \lor p">🔗</a></div></article></details><details id="ex-equivalence-implication-disjunction" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><div class="displaymath process-math" id="ex-equivalence-implication-disjunction-1-1">
+\begin{equation*}
+p \to q \equiv (\lnot p)\lor q
+\end{equation*}
+</div>.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ex-equivalence-implication-disjunction-2-1">Show that <span class="process-math">\(p \to q\)</span> and <span class="process-math">\((\lnot p)\lor q\)</span> are logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#ex-equivalence-implication-disjunction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-equivalence-implication-disjunction-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-equivalence-implication-disjunction-3-1">We compare the truth values of <span class="process-math">\(p \to q\)</span> and <span class="process-math">\((\lnot p)\lor q\)</span> for all possible truth values of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-equivalence-implication-disjunction-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="ex-equivalence-implication-disjunction-3-2"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth Table Comparison<div class="autopermalink" data-description="Table 3.7: Truth Table Comparison"><a href="#ex-equivalence-implication-disjunction-3-2" title="Copy heading and permalink for Table 3.7: Truth Table Comparison" aria-label="Copy heading and permalink for Table 3.7: Truth Table Comparison">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\((\lnot p)\lor q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p \to q\)</span></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></figure><div class="para" id="ex-equivalence-implication-disjunction-3-3">The columns for <span class="process-math">\(p \to q\)</span> and <span class="process-math">\((\lnot p)\lor q\)</span> are identical, so the two statements are logically equivalent. Thus, <span class="process-math">\(p \to q \equiv (\lnot p)\lor q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-equivalence-implication-disjunction-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.6.1"><a href="#ex-equivalence-implication-disjunction-3" title="Copy heading and permalink for Solution 3.6.1" aria-label="Copy heading and permalink for Solution 3.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 3.6: 
+\begin{equation*}
+p \to q \equiv (\lnot p)\lor q
+\end{equation*}
+"><a href="#ex-equivalence-implication-disjunction" title="Copy heading and permalink for Checkpoint 3.6: 
+\begin{equation*}
+p \to q \equiv (\lnot p)\lor q
+\end{equation*}
+" aria-label="Copy heading and permalink for Checkpoint 3.6: 
+\begin{equation*}
+p \to q \equiv (\lnot p)\lor q
+\end{equation*}
+">🔗</a></div></article></details><details id="ex-equivalence-conditional-reversal" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Logical Equivalence of Conditionals.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ex-equivalence-conditional-reversal-2-1">Determine whether the statements <span class="process-math">\(p \to q\)</span> and <span class="process-math">\(q \to p\)</span> are logically equivalent. Justify your answer by constructing a truth table.<div class="autopermalink" data-description="Paragraph"><a href="#ex-equivalence-conditional-reversal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-equivalence-conditional-reversal-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-equivalence-conditional-reversal-3-1">We compare the truth values of <span class="process-math">\(p \to q\)</span> and <span class="process-math">\(q \to p\)</span> for all possible truth values of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-equivalence-conditional-reversal-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="ex-equivalence-conditional-reversal-3-2"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth Table Comparison<div class="autopermalink" data-description="Table 3.9: Truth Table Comparison"><a href="#ex-equivalence-conditional-reversal-3-2" title="Copy heading and permalink for Table 3.9: Truth Table Comparison" aria-label="Copy heading and permalink for Table 3.9: Truth Table Comparison">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p \to q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(q \to p\)</span></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></figure><div class="para" id="ex-equivalence-conditional-reversal-3-3">Since the columns for <span class="process-math">\(p \to q\)</span> and <span class="process-math">\(q \to p\)</span> differ, the two statements are <dfn class="terminology">not</dfn> logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#ex-equivalence-conditional-reversal-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.8.1"><a href="#ex-equivalence-conditional-reversal-3" title="Copy heading and permalink for Solution 3.8.1" aria-label="Copy heading and permalink for Solution 3.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 3.8: Logical Equivalence of Conditionals"><a href="#ex-equivalence-conditional-reversal" title="Copy heading and permalink for Checkpoint 3.8: Logical Equivalence of Conditionals" aria-label="Copy heading and permalink for Checkpoint 3.8: Logical Equivalence of Conditionals">🔗</a></div></article></details><article class="remark remark-like" id="remark-demorgan-laws"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">De Morgan’s Laws.</span>
+</h3>
+<div class="para" id="remark-demorgan-laws-2">De Morgan’s Laws describe how negation interacts with conjunction and disjunction. They state that negating a compound statement changes <dfn class="terminology">and</dfn> to <dfn class="terminology">or</dfn>, and <dfn class="terminology">or</dfn> to <dfn class="terminology">and</dfn>, while negating each individual statement.<div class="autopermalink" data-description="Paragraph"><a href="#remark-demorgan-laws-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-demorgan-and" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Negation of a Conjunction.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-demorgan-and-2">The statement <span class="process-math">\(\lnot(p \land q)\)</span> is logically equivalent to <span class="process-math">\((\lnot p)\lor(\lnot q)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-demorgan-and-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="example-demorgan-and-3">
+\begin{equation*}
+\lnot(p \land q) \equiv (\lnot p)\lor(\lnot q)
+\end{equation*}
+</div>
+<div class="para" id="example-demorgan-and-4">We use truth tables to verify this De Morgan’s Law by comparing the truth values of each pair of statements.<div class="autopermalink" data-description="Paragraph"><a href="#example-demorgan-and-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="example-demorgan-and-5"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth Table for <span class="process-math">\(\lnot(p \land q)\)</span> and <span class="process-math">\((\lnot p)\lor(\lnot q)\)</span><div class="autopermalink" data-description="Table 3.12: Truth Table for \lnot(p \land q) and (\lnot p)\lor(\lnot q)"><a href="#example-demorgan-and-5" title="Copy heading and permalink for Table 3.12: Truth Table for \lnot(p \land q) and (\lnot p)\lor(\lnot q)" aria-label="Copy heading and permalink for Table 3.12: Truth Table for \lnot(p \land q) and (\lnot p)\lor(\lnot q)">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p \land q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot(p \land q)\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\((\lnot p)\lor(\lnot q)\)</span></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></figure><div class="para" id="example-demorgan-and-6">The columns for <span class="process-math">\(\lnot(p \land q)\)</span> and <span class="process-math">\((\lnot p)\lor(\lnot q)\)</span> are identical, so <span class="process-math">\(\lnot(p \land q)\equiv(\lnot p)\lor(\lnot q)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-demorgan-and-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.11: Negation of a Conjunction"><a href="#example-demorgan-and" title="Copy heading and permalink for Example 3.11: Negation of a Conjunction" aria-label="Copy heading and permalink for Example 3.11: Negation of a Conjunction">🔗</a></div></article></details><details id="example-demorgan-or" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Negation of a Disjunction.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-demorgan-or-2">The statement <span class="process-math">\(\lnot(p \lor q)\)</span> is logically equivalent to <span class="process-math">\((\lnot p)\land(\lnot q)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-demorgan-or-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="example-demorgan-or-3">
+\begin{equation*}
+\lnot(p \lor q) \equiv (\lnot p)\land(\lnot q)
+\end{equation*}
+</div>
+<figure class="table table-like" id="example-demorgan-or-4"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth Table for <span class="process-math">\(\lnot(p \lor q)\)</span> and <span class="process-math">\((\lnot p)\land(\lnot q)\)</span><div class="autopermalink" data-description="Table 3.14: Truth Table for \lnot(p \lor q) and (\lnot p)\land(\lnot q)"><a href="#example-demorgan-or-4" title="Copy heading and permalink for Table 3.14: Truth Table for \lnot(p \lor q) and (\lnot p)\land(\lnot q)" aria-label="Copy heading and permalink for Table 3.14: Truth Table for \lnot(p \lor q) and (\lnot p)\land(\lnot q)">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p \lor q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot(p \lor q)\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\((\lnot p)\land(\lnot q)\)</span></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></figure><div class="para" id="example-demorgan-or-5">Since the final columns match, we conclude that <span class="process-math">\(\lnot(p \lor q)\equiv(\lnot p)\land(\lnot q)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-demorgan-or-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.13: Negation of a Disjunction"><a href="#example-demorgan-or" title="Copy heading and permalink for Example 3.13: Negation of a Disjunction" aria-label="Copy heading and permalink for Example 3.13: Negation of a Disjunction">🔗</a></div></article></details><div class="autopermalink" data-description="Remark 3.10: De Morgan’s Laws"><a href="#remark-demorgan-laws" title="Copy heading and permalink for Remark 3.10: De Morgan’s Laws" aria-label="Copy heading and permalink for Remark 3.10: De Morgan’s Laws">🔗</a></div></article><section class="subsection" id="subsec-exercises-logical-equivalence"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<div class="para" id="subsec-exercises-logical-equivalence-2">Determine whether each pair of statements is logically equivalent.  Justify your answer by using truth tables.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-exercises-logical-equivalence-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="q-equiv-a" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-equiv-a-1-1">Determine whether <span class="process-math">\(p\lor(p\land q)\)</span> and <span class="process-math">\(p\)</span> are logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#q-equiv-a-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-equiv-a-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<figure class="table table-like" id="q-equiv-a-2-1"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth Table for <span class="process-math">\(p\lor(p\land q)\)</span> and <span class="process-math">\(p\)</span><div class="autopermalink" data-description="Table 3.16: Truth Table for p\lor(p\land q) and p"><a href="#q-equiv-a-2-1" title="Copy heading and permalink for Table 3.16: Truth Table for p\lor(p\land q) and p" aria-label="Copy heading and permalink for Table 3.16: Truth Table for p\lor(p\land q) and p">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\land q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\lor(p\land q)\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div></figure><div class="para" id="q-equiv-a-2-2">The final two columns are identical, so <span class="process-math">\(p\lor(p\land q)\equiv p\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#q-equiv-a-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.15.1"><a href="#q-equiv-a-2" title="Copy heading and permalink for Solution 3.15.1" aria-label="Copy heading and permalink for Solution 3.15.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.15"><a href="#q-equiv-a" title="Copy heading and permalink for Question 3.15" aria-label="Copy heading and permalink for Question 3.15">🔗</a></div></article></details><details id="q-equiv-b" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-equiv-b-1-1">Determine whether <span class="process-math">\(\lnot(p\lor q)\)</span> and <span class="process-math">\((\lnot p)\lor(\lnot q)\)</span> are logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#q-equiv-b-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-equiv-b-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<figure class="table table-like" id="q-equiv-b-2-1"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth Table for <span class="process-math">\(\lnot(p\lor q)\)</span> and <span class="process-math">\((\lnot p)\lor(\lnot q)\)</span><div class="autopermalink" data-description="Table 3.18: Truth Table for \lnot(p\lor q) and (\lnot p)\lor(\lnot q)"><a href="#q-equiv-b-2-1" title="Copy heading and permalink for Table 3.18: Truth Table for \lnot(p\lor q) and (\lnot p)\lor(\lnot q)" aria-label="Copy heading and permalink for Table 3.18: Truth Table for \lnot(p\lor q) and (\lnot p)\lor(\lnot q)">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\lor q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot(p\lor q)\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\((\lnot p)\lor(\lnot q)\)</span></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></figure><div class="para" id="q-equiv-b-2-2">The columns for <span class="process-math">\(\lnot(p\lor q)\)</span> and <span class="process-math">\((\lnot p)\lor(\lnot q)\)</span> are <dfn class="terminology">not</dfn>identical, so they are logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#q-equiv-b-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.17.1"><a href="#q-equiv-b-2" title="Copy heading and permalink for Solution 3.17.1" aria-label="Copy heading and permalink for Solution 3.17.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.17"><a href="#q-equiv-b" title="Copy heading and permalink for Question 3.17" aria-label="Copy heading and permalink for Question 3.17">🔗</a></div></article></details><details id="q-equiv-c" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-equiv-c-1-1">Determine whether <span class="process-math">\(\lnot(p\to q)\)</span> and <span class="process-math">\((\lnot p)\to(\lnot q)\)</span> are logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#q-equiv-c-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-equiv-c-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<figure class="table table-like" id="q-equiv-c-2-1"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth Table for <span class="process-math">\(\lnot(p\to q)\)</span> and <span class="process-math">\((\lnot p)\to(\lnot q)\)</span><div class="autopermalink" data-description="Table 3.20: Truth Table for \lnot(p\to q) and (\lnot p)\to(\lnot q)"><a href="#q-equiv-c-2-1" title="Copy heading and permalink for Table 3.20: Truth Table for \lnot(p\to q) and (\lnot p)\to(\lnot q)" aria-label="Copy heading and permalink for Table 3.20: Truth Table for \lnot(p\to q) and (\lnot p)\to(\lnot q)">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(p\to q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot(p\to q)\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot p\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\lnot q\)</span></th>
+<th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\((\lnot p)\to(\lnot q)\)</span></th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></figure><div class="para" id="q-equiv-c-2-2">The columns for <span class="process-math">\(\lnot(p\to q)\)</span> and <span class="process-math">\((\lnot p)\to(\lnot q)\)</span> are not identical (for example, when <span class="process-math">\(p=F\)</span> and <span class="process-math">\(q=T\)</span>), so the statements are not logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#q-equiv-c-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.19.1"><a href="#q-equiv-c-2" title="Copy heading and permalink for Solution 3.19.1" aria-label="Copy heading and permalink for Solution 3.19.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.19"><a href="#q-equiv-c" title="Copy heading and permalink for Question 3.19" aria-label="Copy heading and permalink for Question 3.19">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.1: Exercises"><a href="#subsec-exercises-logical-equivalence" title="Copy heading and permalink for Subsection 3.1: Exercises" aria-label="Copy heading and permalink for Subsection 3.1: Exercises">🔗</a></div></section><section class="subsection" id="subsec-negating-statements"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Negating Statements</span>
+</h3>
+<div class="para" id="subsec-negating-statements-2">Negating a statement means forming a new statement that is true exactly when the original statement is false. For compound statements, negation must be handled carefully.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-negating-statements-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-negating-statements-3">In particular, negating conjunctions and disjunctions follows <dfn class="terminology">De Morgan’s Laws</dfn>, which were justified earlier using truth tables. See <a href="sec-logical-equivalence.html#remark-demorgan-laws" class="xref" data-knowl="./knowl/xref/remark-demorgan-laws.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 3.10: De Morgan’s Laws">Remark 3.10</a> for the formal statements.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-negating-statements-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-negating-statements-4">Negating conditional statements behaves differently and is a common source of confusion. The difference between a conditional and its reversal was explored in <a href="sec-logical-equivalence.html#ex-equivalence-conditional-reversal" class="xref" data-knowl="./knowl/xref/ex-equivalence-conditional-reversal.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 3.8: Logical Equivalence of Conditionals">Checkpoint 3.8</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-negating-statements-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-negating-english" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Negate the following Statements in English.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><article class="task exercise-like" id="task-negate-simple"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="task-negate-simple-1-1">We enjoy MATH.<div class="autopermalink" data-description="Paragraph"><a href="#task-negate-simple-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="task-negate-simple-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="task-negate-simple-2-1">We do not enjoy MATH.<div class="autopermalink" data-description="Paragraph"><a href="#task-negate-simple-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.21.a.1"><a href="#task-negate-simple-2" title="Copy heading and permalink for Solution 3.21.a.1" aria-label="Copy heading and permalink for Solution 3.21.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.21.a"><a href="#task-negate-simple" title="Copy heading and permalink for Task 3.21.a" aria-label="Copy heading and permalink for Task 3.21.a">🔗</a></div></article><article class="task exercise-like" id="task-negate-conjunction"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="task-negate-conjunction-1-1">We enjoy MATH and pizza.<div class="autopermalink" data-description="Paragraph"><a href="#task-negate-conjunction-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="task-negate-conjunction-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="task-negate-conjunction-2-1">We do not enjoy MATH or we do not enjoy pizza.<div class="autopermalink" data-description="Paragraph"><a href="#task-negate-conjunction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.21.b.1"><a href="#task-negate-conjunction-2" title="Copy heading and permalink for Solution 3.21.b.1" aria-label="Copy heading and permalink for Solution 3.21.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.21.b"><a href="#task-negate-conjunction" title="Copy heading and permalink for Task 3.21.b" aria-label="Copy heading and permalink for Task 3.21.b">🔗</a></div></article><article class="task exercise-like" id="task-negate-disjunction"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="task-negate-disjunction-1-1">We enjoy MATH or pizza.<div class="autopermalink" data-description="Paragraph"><a href="#task-negate-disjunction-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="task-negate-disjunction-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="task-negate-disjunction-2-1">We do not enjoy MATH and we do not enjoy pizza.<div class="autopermalink" data-description="Paragraph"><a href="#task-negate-disjunction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.21.c.1"><a href="#task-negate-disjunction-2" title="Copy heading and permalink for Solution 3.21.c.1" aria-label="Copy heading and permalink for Solution 3.21.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.21.c"><a href="#task-negate-disjunction" title="Copy heading and permalink for Task 3.21.c" aria-label="Copy heading and permalink for Task 3.21.c">🔗</a></div></article><article class="task exercise-like" id="task-negate-conditional"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="task-negate-conditional-1-1">If we enjoy MATH, then we enjoy pizza.<div class="autopermalink" data-description="Paragraph"><a href="#task-negate-conditional-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="task-negate-conditional-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="task-negate-conditional-2-1">We enjoy MATH and we don’t enjoy pizza.<div class="autopermalink" data-description="Paragraph"><a href="#task-negate-conditional-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.21.d.1"><a href="#task-negate-conditional-2" title="Copy heading and permalink for Solution 3.21.d.1" aria-label="Copy heading and permalink for Solution 3.21.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.21.d"><a href="#task-negate-conditional" title="Copy heading and permalink for Task 3.21.d" aria-label="Copy heading and permalink for Task 3.21.d">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 3.21: Negate the following Statements in English"><a href="#ex-negating-english" title="Copy heading and permalink for Checkpoint 3.21: Negate the following Statements in English" aria-label="Copy heading and permalink for Checkpoint 3.21: Negate the following Statements in English">🔗</a></div></article></details><div class="para" id="subsec-negating-statements-6">These examples illustrate how negation interacts with <dfn class="terminology">and</dfn>, <dfn class="terminology">or</dfn>, and <dfn class="terminology">if, then</dfn>. This behavior is precisely described by De Morgan’s Laws.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-negating-statements-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.2: Negating Statements"><a href="#subsec-negating-statements" title="Copy heading and permalink for Subsection 3.2: Negating Statements" aria-label="Copy heading and permalink for Subsection 3.2: Negating Statements">🔗</a></div></section><section class="subsection" id="subsec-exercise"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercise</span>
+</h3>
+<details id="q-negate-conditional-a" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-negate-conditional-a-1-1">Find the negation of: "If you say “I do”, then you will be happy for the rest of your life."<div class="autopermalink" data-description="Paragraph"><a href="#q-negate-conditional-a-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-negate-conditional-a-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-negate-conditional-a-2-1">You say “I do” and you will not be happy for the rest of your life.<div class="autopermalink" data-description="Paragraph"><a href="#q-negate-conditional-a-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.22.1"><a href="#q-negate-conditional-a-2" title="Copy heading and permalink for Solution 3.22.1" aria-label="Copy heading and permalink for Solution 3.22.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.22"><a href="#q-negate-conditional-a" title="Copy heading and permalink for Question 3.22" aria-label="Copy heading and permalink for Question 3.22">🔗</a></div></article></details><details id="q-negate-conditional-b" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-negate-conditional-b-1-1">Find the negation of:  "I’ll be surprised if that is an authentic Persian rug."<div class="autopermalink" data-description="Paragraph"><a href="#q-negate-conditional-b-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-negate-conditional-b-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-negate-conditional-b-2-1">I am not surprised and that is an authentic Persian rug.<div class="autopermalink" data-description="Paragraph"><a href="#q-negate-conditional-b-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.23.1"><a href="#q-negate-conditional-b-2" title="Copy heading and permalink for Solution 3.23.1" aria-label="Copy heading and permalink for Solution 3.23.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.23"><a href="#q-negate-conditional-b" title="Copy heading and permalink for Question 3.23" aria-label="Copy heading and permalink for Question 3.23">🔗</a></div></article></details><details id="q-negation-joe" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-negation-joe-1-1">"Joe tells you that he is an actor and went to India last summer. You know that he is lying. What compound statement about Joe is true?<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-joe-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-negation-joe-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-negation-joe-2-1">Joe is not an actor or he did not go to India last summer.<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-joe-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.24.1"><a href="#q-negation-joe-2" title="Copy heading and permalink for Solution 3.24.1" aria-label="Copy heading and permalink for Solution 3.24.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.24"><a href="#q-negation-joe" title="Copy heading and permalink for Question 3.24" aria-label="Copy heading and permalink for Question 3.24">🔗</a></div></article></details><details id="q-simplify-demorgan" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-simplify-demorgan-1-1">Simplify the expression <span class="process-math">\(\lnot[(\lnot p)\land q]\)</span> using De Morgan’s Laws and the double negation.<div class="autopermalink" data-description="Paragraph"><a href="#q-simplify-demorgan-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-simplify-demorgan-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-simplify-demorgan-2-1">By De Morgan’s Law, <span class="process-math">\(\lnot[(\lnot p)\land q]\equiv \lnot(\lnot p)\lor \lnot q\text{.}\)</span> Using double negation, this simplifies to <span class="process-math">\(p\lor \lnot q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#q-simplify-demorgan-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.25.1"><a href="#q-simplify-demorgan-2" title="Copy heading and permalink for Solution 3.25.1" aria-label="Copy heading and permalink for Solution 3.25.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.25"><a href="#q-simplify-demorgan" title="Copy heading and permalink for Question 3.25" aria-label="Copy heading and permalink for Question 3.25">🔗</a></div></article></details><details id="q-simplify-demorgan-2" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-simplify-demorgan-2-1-1">Simplify the expression <span class="process-math">\(\lnot(p\lor \lnot q)\)</span> using De Morgan’s Laws and the double negation.<div class="autopermalink" data-description="Paragraph"><a href="#q-simplify-demorgan-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-simplify-demorgan-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-simplify-demorgan-2-2-1">By De Morgan’s Law, <span class="process-math">\(\lnot(p\lor \lnot q)\equiv \lnot p \land \lnot(\lnot q)\text{.}\)</span> Using double negation, this simplifies to <span class="process-math">\(\lnot p \land q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#q-simplify-demorgan-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.26.1"><a href="#q-simplify-demorgan-2-2" title="Copy heading and permalink for Solution 3.26.1" aria-label="Copy heading and permalink for Solution 3.26.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.26"><a href="#q-simplify-demorgan-2" title="Copy heading and permalink for Question 3.26" aria-label="Copy heading and permalink for Question 3.26">🔗</a></div></article></details><details id="q-simplify-demorgan-3" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-simplify-demorgan-3-1-1">Simplify the expression <span class="process-math">\(\lnot[(p\land q)\lor r]\)</span> using De Morgan’s Laws.<div class="autopermalink" data-description="Paragraph"><a href="#q-simplify-demorgan-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-simplify-demorgan-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-simplify-demorgan-3-2-1">By De Morgan’s Law, <span class="process-math">\(\lnot[(p\land q)\lor r]\equiv \lnot(p\land q)\land \lnot r\text{.}\)</span> Applying De Morgan’s Law again, <span class="process-math">\(\lnot(p\land q)\equiv \lnot p \lor \lnot q\text{.}\)</span> Thus, the expression simplifies to <span class="process-math">\((\lnot p \lor \lnot q)\land \lnot r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#q-simplify-demorgan-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.27.1"><a href="#q-simplify-demorgan-3-2" title="Copy heading and permalink for Solution 3.27.1" aria-label="Copy heading and permalink for Solution 3.27.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.27"><a href="#q-simplify-demorgan-3" title="Copy heading and permalink for Question 3.27" aria-label="Copy heading and permalink for Question 3.27">🔗</a></div></article></details><details id="q-simplify-conditional-demorgan" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-simplify-conditional-demorgan-1-1">Simplify the expression <span class="process-math">\(\lnot(p \to q)\)</span> using logical equivalence.<div class="autopermalink" data-description="Paragraph"><a href="#q-simplify-conditional-demorgan-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-simplify-conditional-demorgan-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-simplify-conditional-demorgan-2-1">First rewrite the conditional using logical equivalence: <span class="process-math">\(p \to q \equiv \lnot p \lor q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#q-simplify-conditional-demorgan-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="q-simplify-conditional-demorgan-2-2">Substituting, we obtain <span class="process-math">\(\lnot(\lnot p \lor q)\text{.}\)</span> By De Morgan’s Law, this is equivalent to <span class="process-math">\(\lnot(\lnot p)\land \lnot q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#q-simplify-conditional-demorgan-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="q-simplify-conditional-demorgan-2-3">Using double negation, the expression simplifies to <span class="process-math">\(p \land \lnot q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#q-simplify-conditional-demorgan-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.28.1"><a href="#q-simplify-conditional-demorgan-2" title="Copy heading and permalink for Solution 3.28.1" aria-label="Copy heading and permalink for Solution 3.28.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.28"><a href="#q-simplify-conditional-demorgan" title="Copy heading and permalink for Question 3.28" aria-label="Copy heading and permalink for Question 3.28">🔗</a></div></article></details><details id="q-negation-billionaire" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-negation-billionaire-1-1">Use logical equivalence to rewrite the statement: “It is not true that both you are a billionaire and I am crazy.”<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-billionaire-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-negation-billionaire-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-negation-billionaire-2-1">You are not a billionaire or I am not crazy.<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-billionaire-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.29.1"><a href="#q-negation-billionaire-2" title="Copy heading and permalink for Solution 3.29.1" aria-label="Copy heading and permalink for Solution 3.29.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.29"><a href="#q-negation-billionaire" title="Copy heading and permalink for Question 3.29" aria-label="Copy heading and permalink for Question 3.29">🔗</a></div></article></details><details id="q-negation-wise-fool" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-negation-wise-fool-1-1">Use logical equivalence to rewrite the sentence: “It is not true that both I am wise and you are a fool.”<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-wise-fool-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-negation-wise-fool-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-negation-wise-fool-2-1">I am not wise or you are not a fool.<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-wise-fool-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.30.1"><a href="#q-negation-wise-fool-2" title="Copy heading and permalink for Solution 3.30.1" aria-label="Copy heading and permalink for Solution 3.30.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.30"><a href="#q-negation-wise-fool" title="Copy heading and permalink for Question 3.30" aria-label="Copy heading and permalink for Question 3.30">🔗</a></div></article></details><details id="q-negation-either-wise-fool" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-negation-either-wise-fool-1-1">Use logical equivalence to rewrite the sentence: “It is not true that either I am wise or you are a fool.”<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-either-wise-fool-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-negation-either-wise-fool-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-negation-either-wise-fool-2-1">I am not wise and you are not a fool.<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-either-wise-fool-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.31.1"><a href="#q-negation-either-wise-fool-2" title="Copy heading and permalink for Solution 3.31.1" aria-label="Copy heading and permalink for Solution 3.31.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.31"><a href="#q-negation-either-wise-fool" title="Copy heading and permalink for Question 3.31" aria-label="Copy heading and permalink for Question 3.31">🔗</a></div></article></details><details id="q-negation-conditional-party" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-negation-conditional-party-1-1">Use logical equivalence to rewrite the sentence: “If you decide to go to the party, then I will go with you.”<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-conditional-party-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-negation-conditional-party-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-negation-conditional-party-2-1">If I do not go with you, then you did not decide to go to the party.<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-conditional-party-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.32.1"><a href="#q-negation-conditional-party-2" title="Copy heading and permalink for Solution 3.32.1" aria-label="Copy heading and permalink for Solution 3.32.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.32"><a href="#q-negation-conditional-party" title="Copy heading and permalink for Question 3.32" aria-label="Copy heading and permalink for Question 3.32">🔗</a></div></article></details><details id="q-negation-marriage" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-negation-marriage-1-1">Use logical equivalence to rewrite the sentence: “If you say ‘I do’, then you will be happy for the rest of your life.”<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-marriage-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-negation-marriage-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-negation-marriage-2-1">If you are not happy for the rest of your life, then you did not say “I do.”<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-marriage-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.33.1"><a href="#q-negation-marriage-2" title="Copy heading and permalink for Solution 3.33.1" aria-label="Copy heading and permalink for Solution 3.33.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.33"><a href="#q-negation-marriage" title="Copy heading and permalink for Question 3.33" aria-label="Copy heading and permalink for Question 3.33">🔗</a></div></article></details><details id="q-negation-rug" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-negation-rug-1-1">Use logical equivalence to rewrite the sentence: “I’ll be surprised if that is an authentic Persian rug.”<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-rug-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-negation-rug-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-negation-rug-2-1">If that is an authentic Persian rug, then I will be surprised.<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-rug-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.34.1"><a href="#q-negation-rug-2" title="Copy heading and permalink for Solution 3.34.1" aria-label="Copy heading and permalink for Solution 3.34.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.34"><a href="#q-negation-rug" title="Copy heading and permalink for Question 3.34" aria-label="Copy heading and permalink for Question 3.34">🔗</a></div></article></details><details id="q-negation-peace" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="q-negation-peace-1-1">Use logical equivalence to rewrite the sentence: “If wanting peace is wrong, I do not want to be right.”<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-peace-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="q-negation-peace-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="q-negation-peace-2-1">If I want to be right, then wanting peace is not wrong.<div class="autopermalink" data-description="Paragraph"><a href="#q-negation-peace-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.35.1"><a href="#q-negation-peace-2" title="Copy heading and permalink for Solution 3.35.1" aria-label="Copy heading and permalink for Solution 3.35.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 3.35"><a href="#q-negation-peace" title="Copy heading and permalink for Question 3.35" aria-label="Copy heading and permalink for Question 3.35">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.3: Exercise"><a href="#subsec-exercise" title="Copy heading and permalink for Subsection 3.3: Exercise" aria-label="Copy heading and permalink for Subsection 3.3: Exercise">🔗</a></div></section><div class="autopermalink" data-description="Section 3: Logical Equivalences"><a href="#sec-logical-equivalence" title="Copy heading and permalink for Section 3: Logical Equivalences" aria-label="Copy heading and permalink for Section 3: Logical Equivalences">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="section-course-requirements.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
